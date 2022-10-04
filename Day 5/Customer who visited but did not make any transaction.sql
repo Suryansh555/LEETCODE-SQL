@@ -1,0 +1,6 @@
+select customer_id, count(customer_id) as count_no_trans
+from Visits 
+left join Transactions
+on Transactions.visit_id = Visits.visit_id
+where transaction_id is NULL
+group by customer_id
