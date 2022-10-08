@@ -1,0 +1,1 @@
+select Distinct(P.email) as Email from Person P where P.email in (select email from Person where P.id != id );  
